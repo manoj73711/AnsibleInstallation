@@ -1,0 +1,5 @@
+Step 1 : cat >> /etc/apt/sources.list
+         deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+
+Step 2 : apt-get update
+Step 3 : apt-get install sudo -y

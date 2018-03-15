@@ -1,0 +1,7 @@
+Q) how to create a inventory file
+cat inventory.txt 
+target1 ansible_host=osboxes@192.168.0.14
+target2 ansible_host=osboxes@192.168.0.15
+root@osboxes:~# ansible target* -m ping -i inventory.txt
+
+

@@ -14,3 +14,13 @@ Step 4 : apt-get install dirmngr
 Step 4 : sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 Step 5 : sudo apt-get update
 Step 6 : sudo apt-get install ansible
+Step 7 : Genarate public key in controller machine Add public key in the target servers
+a. ssh-keygen -t rsa -C "name@example.org"
+b. ssh-copy-id user@child1.dev
+Step 8 : Add the hosts in the host file at /etc/ansible/hosts
+Step 9 : Execute the below command to check the ansible is pinging and getting pong
+         ansible all -m ping
+Step 10 : To execute a particular choosen file having hosts
+            test file
+            osboxes@109.106.0.2
+         

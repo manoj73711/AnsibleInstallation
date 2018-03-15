@@ -1,8 +1,11 @@
 ***Inventory FIle***
 1. Inventory file consists of the list of hosts and if there is no inventory file found , ansible will refer to the hosts file in
   /etc/ansible/hosts
+  Ansible inventory files defines how ansible connects to the target servers
+  
 Q) how to configure hosts in the inventory file by groups
   sample inventory files
+  -----------------------
   
   server1.company.com
   server2.company.com
@@ -11,3 +14,19 @@ Q) how to configure hosts in the inventory file by groups
   server4.company.com
   [Database]
   server5.company.com
+  
+  Can specify the alias name to the servers in the inventory file
+  ----------------------------------------------------------------
+  web  ansible_host=server1.company.com  ansible_connection=ssh  ansible_user=root
+  db ansible_host=server2.company.com ansible_connection=winrm   ansible_user=admin
+  mail ansible_host=server3.company.com ansible_connection=ssh   ansible_password=passw0rd
+  web2 ansible_host=server4.company.com ansible_connection=winrm
+  
+  Inventory parameter
+ ------------------------
+ ansible_connection - ssh/winrm/localhost
+ ansible_port-22/5986
+ ansible_user-root/adminstrator
+ ansible_ssh_pass-password
+ 
+ 

@@ -1,0 +1,13 @@
+***Inventory FIle***
+1. Inventory file consists of the list of hosts and if there is no inventory file found , ansible will refer to the hosts file in
+  /etc/ansible/hosts
+Q) how to configure hosts in the inventory file by groups
+  sample inventory files
+  
+  server1.company.com
+  server2.company.com
+  [Email]
+  server3.company.com
+  server4.company.com
+  [Database]
+  server5.company.com
